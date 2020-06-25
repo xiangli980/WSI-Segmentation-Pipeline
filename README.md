@@ -12,9 +12,9 @@ matplotlib<br>
 
 ## WSI Preprocess
 Whole Slide Images are  high resolution images which are usually stored in pyramidal tiled (.svs) files. We first convert them into downscaled .PNG format to be used in the following steps.<br>
-- Input `.svs` file to `\WSI_Preprocess\slides`
-- Run `step1_read_WSI` to generate image patch data in `\WSI_Preprocess\masks_patch`,`\WSI_Preprocess\slides_patch` and whole slide in `\data`
-- Run `step2_make_HDF5` to organize patches into training/testing cohorts of HDF5 file (.pytable) in `\data`  
+- Input `.svs` file into `\WSI_Preprocess\slides`
+- Run `step1_read_WSI` to read whole slide region into `\data` and extract image patch data in `\WSI_Preprocess\masks_patch`, `\WSI_Preprocess\slides_patch`
+- Run `step2_make_HDF5` to organize patches into training/testing cohorts of HDF5 file (.pytable) into `\data`  
 
 ## Train
 Defualt segmentation model is a Unet, requiring input image size of 256x256x3 and mask size of 256x256  
