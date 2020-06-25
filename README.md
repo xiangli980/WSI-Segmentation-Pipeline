@@ -1,5 +1,5 @@
 # WSI-Segmentation-Pipeline
-This is a repo for Deep Learning Segmentation of Glomeruli in WSI(Whole Slide Image) of Donor Kidney Biopsy.
+This is a repo for Deep Learning Segmentation of Glomeruli in WSI(Whole Slide Image) of H&E frozen Donor Kidney Biopsy.
 ## Requirements
 Python 3.7.4 <br>
 PyTorch 1.4.0<br>
