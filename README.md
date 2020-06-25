@@ -28,7 +28,7 @@ Defualt segmentation model is a Unet, requiring input image size of 256x256x3 an
 To make prediction on the whole slide, we need to divide the slide into patches and stitch predicted results together to generate whole prediction mask 
 - Input WSI from `\data\WSI`
 - Run `reconstruct_demo` to perform center-crop window-slide prediction and stitching strategy 
-- Generate whole slide prediction and performance data into `\log\WSI`
+- Generate whole slide prediction and performance data into `\log\reconst`
 
 
    
