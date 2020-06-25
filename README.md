@@ -30,5 +30,6 @@ To make prediction on the whole slide, we need to divide the slide into patches 
 - Run `reconstruct_demo` to perform center-crop window-slide prediction and stitching strategy 
 - Generate whole slide prediction and performance data into `\log\reconst`
 
-
+## Reference
+based on https://github.com/choosehappy/PytorchDigitalPathology/tree/master/segmentation_epistroma_unet
    
