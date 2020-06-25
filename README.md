@@ -1,10 +1,10 @@
 # WSI-Segmentation-Pipeline
 This is a repo for Deep Learning Segmentation of Glomeruli in WSI(Whole Slide Image) of Donor Kidney Biopsy.
 ## Requirements
-Python 3.6 <br>
-PyTorch<br>
-torchvision<br>
-openslide (for WSI preprocess)<br> 
+Python 3.7.4 <br>
+PyTorch 1.4.0<br>
+torchvision 0.5.0<br>
+openslide-python 1.1.1 (for WSI preprocess)<br> 
 skimage<br>
 sklearn<br>
 cv2<br>
@@ -28,7 +28,7 @@ Defualt segmentation model is a Unet, requiring input image size of 256x256x3 an
 To make prediction on the whole slide, we need to divide the slide into patches and stitch predicted results together to generate whole prediction mask 
 - Input WSI from `\data\WSI`
 - Run `reconstruct_demo` to perform center-crop window-slide stitch strategy 
-- generate whole slide prediction and performance data into `\log\WSI`
+- Generate whole slide prediction and performance data into `\log\WSI`
 
 
    
