@@ -13,7 +13,7 @@ matplotlib<br>
 ## WSI Preprocess
 Whole Slide Images are  high resolution images which are usually stored in pyramidal tiled (.svs) files. We first convert them into downscaled .PNG format to be used in the following steps.<br>
 - Input `.svs` file into `\WSI_Preprocess\slides`
-- Run `step1_read_WSI` to read whole slide region into `\data` and extract image patches for training and testing in `\WSI_Preprocess\masks_patch`, `\WSI_Preprocess\slides_patch`
+- Run `step1_read_WSI` to fetch whole slide region into `\data\WSI` and extract image patches for training and testing in `\WSI_Preprocess\masks_patch`, `\WSI_Preprocess\slides_patch`
 - Run `step2_make_HDF5` to organize patches into training/testing cohorts of HDF5 file (.pytable) into `\data`  
 
 ## Train
