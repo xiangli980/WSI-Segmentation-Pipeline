@@ -31,8 +31,8 @@ To make prediction on the whole slide, we need to divide the slide into patches 
 - Generate whole slide prediction and performance data into `\log\reconst`
 
 ## Reference
-Code based on https://github.com/choosehappy/PytorchDigitalPathology/tree/master/segmentation_epistroma_unet
-For paper:
-Xiang Li et al. Deep learning segmentation of glomeruli on kidney donor frozen sections. J Med Imaging 2021
+Code based on https://github.com/choosehappy/PytorchDigitalPathology/tree/master/segmentation_epistroma_unet <br>
+For paper:<br>
+Xiang Li et al. Deep learning segmentation of glomeruli on kidney donor frozen sections. J Med Imaging 2021 <br>
 Aritra Ray et al. Decoding the Encoder. SoutheastCon 2023  
    
