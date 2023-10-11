@@ -4,7 +4,7 @@ from src.models import *
 class GlomNet():
   
   def __init__(self, isTrain, isContinue, savedir, loadpath = "", modelname = "UNet"):
-    self.gpuid = 0
+    self.gpuid = 0   # default to GPU id 0
     self.isTrain = isTrain
     self.isContinue = isContinue
     self.save_dir = savedir
@@ -18,6 +18,7 @@ class GlomNet():
       self.device = torch.device(f'cuda:{self.gpuid}')
     else:
       self.device = torch.device(f'cpu')
+      print('working on cpu')
 
     self.model = self.define_net(modelname)
     
@@ -41,7 +42,7 @@ class GlomNet():
     if(modelname=="UNet"):
       net = UNet(pretrained=True)
     print(modelname)
-    print(net)
+    # print(net)
     return net.to(self.device)
 
   #load models from the disk

@@ -45,7 +45,7 @@ class UNet(nn.Module):
 
         super().__init__()
 
-        self.encoder = models.vgg13_bn(pretrained=pretrained).features
+        self.encoder = models.vgg13_bn().features
 
         self.relu = nn.ReLU(inplace = True)
         self.pool = self.encoder[6]

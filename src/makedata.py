@@ -38,11 +38,11 @@ class Dataset(object):
         #get a random seed so that we can reproducibly do the transofrmations
         seed = random.randrange(sys.maxsize) 
         if self.img_transform is not None:
-            random.seed(seed)
+            torch.manual_seed(seed)
             img_new = self.img_transform(img)
 
         if self.mask_transform is not None:
-            random.seed(seed)
+            torch.manual_seed(seed)
             mask_new = self.mask_transform(mask)
             mask_new = np.asarray(mask_new)[0,:,:].squeeze()
 
@@ -72,7 +72,7 @@ class Data_Loader():
           transforms.ToPILImage(),
           transforms.RandomVerticalFlip(),
           transforms.RandomHorizontalFlip(),
-          transforms.RandomAffine(30, translate=None, scale=(0.7,1.3), shear=20, resample=False, fillcolor=0),
+          transforms.RandomAffine(30, translate=None, scale=(0.7,1.3), shear=20),
           transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.2),
           transforms.ToTensor(),
           ])
@@ -80,7 +80,7 @@ class Data_Loader():
           transforms.ToPILImage(),
           transforms.RandomVerticalFlip(),
           transforms.RandomHorizontalFlip(),
-          transforms.RandomAffine(30, translate=None, scale=(0.7,1.3), shear=20, resample=False, fillcolor=0),
+          transforms.RandomAffine(30, translate=None, scale=(0.7,1.3), shear=20),
           transforms.ToTensor(),
           ])
     
@@ -88,7 +88,7 @@ class Data_Loader():
         img_transform=img_transform , mask_transform = mask_transform)
 
     self.dataloader = DataLoader(self.dataset, batch_size = batch,
-        shuffle = self.shuffle, num_workers = 0)
+        shuffle = self.shuffle, num_workers = 2)
 
   def load_data(self):
     return self.dataset

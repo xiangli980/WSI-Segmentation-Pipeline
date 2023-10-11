@@ -3,3 +3,7 @@ __pycache__
 example_data
 .git
 
+data/dk8_train.pytable
+data/dk8_val.pytable
+log/dk8_UNet_norm_25x_pre249*.pth
+log/UNet_nonscl_pre0*.pth
