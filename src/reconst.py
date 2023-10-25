@@ -2,7 +2,7 @@ import math
 import os
 import cv2
 import numpy as np
-import pandas as pd
+# import pandas as pd
 from PIL import Image
 import skimage.io as skio 
 import matplotlib.pyplot as plt
@@ -164,7 +164,7 @@ def rm_small(contours,masks):
       if (np.sum(masks[i])>200):
           contours_n.append(contours[i])
           masks_n.append(masks[i])
-  return np.asarray(contours_n),np.asarray(masks_n)
+  return np.asarray(contours_n,dtype=object),np.asarray(masks_n,dtype=object)   
 
 # compare prediction to GT gloms
 def make_compare(mask_y,mask_p,contours_p,contours_y):
